@@ -528,7 +528,7 @@ section { padding: 64px 0; }
   gap: 24px;
 }
 .career-card {
-  background: var(--card-bg, #fff);
+  background: var(--surface);
   border: 1px solid rgba(99,102,241,.18);
   border-radius: 22px;
   padding: 26px 24px;
@@ -573,11 +573,11 @@ section { padding: 64px 0; }
   padding: 4px 10px;
   border-radius: 999px;
   background: rgba(99,102,241,.12);
-  color: var(--tag-color, #4f46e5);
+  color: var(--tag-color, var(--primary));
 }
 .salary { border-top: 1px dashed rgba(99,102,241,.25); padding-top: 14px; }
 .sal-row { display: flex; justify-content: space-between; align-items: baseline; font-size: .9rem; margin-bottom: 6px; }
-.sal-row strong { font-size: 1.05rem; color: #4f46e5; font-variant-numeric: tabular-nums; }
+.sal-row strong { font-size: 1.05rem; color: var(--primary); font-variant-numeric: tabular-nums; }
 .bar { height: 10px; border-radius: 999px; background: rgba(99,102,241,.12); overflow: hidden; margin-bottom: 12px; }
 .bar-fill { height: 100%; width: 0; border-radius: 999px; transition: width 1.4s cubic-bezier(.22,1,.36,1); }
 .bar-fill.bruto { background: linear-gradient(90deg, #6366f1, #8b5cf6); }

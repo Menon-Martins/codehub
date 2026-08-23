@@ -237,9 +237,9 @@
       var p = Math.min((ts - start) / dur, 1);
       var eased = 1 - Math.pow(1 - p, 3);
       var val = Math.round(target * eased);
-      el.textContent = prefix + val.toLocaleString("pt-BR") + suffix;
+      el.textContent = prefix + val.toLocaleString("en-US") + suffix;
       if (p < 1) requestAnimationFrame(step);
-      else el.textContent = prefix + target.toLocaleString("pt-BR") + suffix;
+      else el.textContent = prefix + target.toLocaleString("en-US") + suffix;
     }
     requestAnimationFrame(step);
   }
