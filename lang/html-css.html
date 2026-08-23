@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Learn HTML & CSS from zero. Free tutorial with Beginner, Intermediate, and Advanced levels. Build real web pages, no install needed." />
+  <meta name="theme-color" content="#4f46e5" />
+  <title>HTML & CSS Tutorial — CodeHub</title>
+  <link rel="stylesheet" href="../css/styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header"><div class="container nav"><a class="brand" href="../index.html" aria-label="CodeHub home"><span class="logo" aria-hidden="true"></></span><span>CodeHub</span></a><button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">☰</button><nav aria-label="Primary"><ul class="nav-links"><li><a href="../index.html">Home</a></li><li><a href="../languages.html" class="active">Languages</a></li><li><a href="../index.html#start">Start Here</a></li><li><a href="../index.html#faq">FAQ</a></li></ul></nav><button class="theme-toggle" aria-label="Switch to dark mode">🌙</button></div></header>
+  <main id="main">
+    <nav class="breadcrumb container" aria-label="Breadcrumb"><a href="../index.html">Home</a><span>›</span><a href="../languages.html">Languages</a><span>›</span><span aria-current="page">HTML &amp; CSS</span></nav>
+    <div class="container tutorial-layout">
+      <aside class="toc" aria-label="Table of contents"><h4>Contents</h4><ul><li><a href="#what">What are HTML &amp; CSS?</a></li><li><a href="#setup">Run Online (No Install)</a></li><li><a href="#beginner">Beginner</a></li><li><a href="#intermediate">Intermediate</a></li><li><a href="#advanced">Advanced</a></li><li><a href="#next">What's Next?</a></li></ul></aside>
+      <article class="lesson">
+        <h1>🎨 HTML &amp; CSS — Learn From Zero</h1>
+        <p class="callout play"><span class="ico" aria-hidden="true">🎮</span><strong>Playground:</strong> <a href="https://www.w3schools.com/html/tryit.asp" target="_blank" rel="noopener">W3Schools Tryit</a> | <a href="https://codepen.io/pen" target="_blank" rel="noopener">CodePen</a> — click, type, see it live.</p>
+
+        <section id="what"><h2>What are HTML &amp; CSS?</h2><p><strong>HTML</strong> (HyperText Markup Language) is the <em>skeleton</em> of every web page — it defines headings, paragraphs, images and links. <strong>CSS</strong> (Cascading Style Sheets) is the <em>skin</em> — it colors, spaces and lays out those elements. Together they build everything you see on the web.</p><ul><li>Websites &amp; landing pages</li><li>Blogs and portfolios</li><li>The base of React, Vue and every web framework</li></ul></section>
+
+        <section id="setup"><h2>Run Online — No Install</h2><p>Open <a href="https://codepen.io/pen" target="_blank" rel="noopener">CodePen</a> or <a href="https://www.w3schools.com/html/tryit.asp" target="_blank" rel="noopener">W3Schools Tryit</a>. Type HTML on the left and CSS on the right — the result shows instantly. No downloads needed.</p></section>
+
+        <div class="level-tabs" role="tablist" aria-label="Difficulty level">
+          <button class="level-tab" role="tab" aria-selected="true" data-level="beginner" id="tab-beginner">🟢 Beginner</button>
+          <button class="level-tab" role="tab" aria-selected="false" data-level="intermediate" id="tab-intermediate">🟡 Intermediate</button>
+          <button class="level-tab" role="tab" aria-selected="false" data-level="advanced" id="tab-advanced">🔴 Advanced</button>
+        </section>
+
+        <section id="beginner" class="level-panel" data-level="beginner" role="tabpanel" aria-labelledby="tab-beginner">
+          <h2>🟢 Beginner — Your First Page</h2>
+          <section id="structure"><h3>Page Structure</h3><div class="codeblock"><div class="cb-head"><span class="cb-lang">html</span><button class="copy-btn" aria-label="Copy code">Copy</button></div><pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;My First Page&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;Hello!&lt;/h1&gt;
+    &lt;p&gt;This is my first web page.&lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</code></pre></div><p>Tags come in pairs: <code>&lt;tag&gt; ... &lt;/tag&gt;</code>.</p></section>
+
+          <section id="text"><h3>Text &amp; Links</h3><div class="codeblock"><div class="cb-head"><span class="cb-lang">html</span><button class="copy-btn" aria-label="Copy code">Copy</button></div><pre><code>&lt;h1&gt;Big Title&lt;/h1&gt;
+&lt;h2&gt;Smaller Title&lt;/h2&gt;
+&lt;p&gt;A paragraph of text.&lt;/p&gt;
+&lt;a href="https://codehub.example"&gt;Visit CodeHub&lt;/a&gt;</code></pre></div><p>Use <code>&lt;a&gt;</code> for links and <code>&lt;img src="..."&gt;</code> for images.</p></section>
+
+          <section id="firstcss"><h3>Your First CSS</h3><div class="codeblock"><div class="cb-head"><span class="cb-lang">css</span><button class="copy-btn" aria-label="Copy code">Copy</button></div><pre><code>h1 {
+  color: #4f46e5;
+  font-family: Arial, sans-serif;
+}
+p {
+  line-height: 1.6;
+}</code></pre></div><p>A rule has a <strong>selector</strong> (<code>h1</code>) and <strong>declarations</strong> (<code>color: ...;</code>).</p></section>
+        </section>
+
+        <section id="intermediate" class="level-panel" data-level="intermediate" role="tabpanel" aria-labelledby="tab-intermediate">
+          <h2>🟡 Intermediate — Layout &amp; Box Model</h2>
+          <section id="box"><h3>The Box Model</h3><div class="codeblock"><div class="cb-head"><span class="cb-lang">css</span><button class="copy-btn" aria-label="Copy code">Copy</button></div><pre><code>.card {
+  width: 300px;
+  padding: 20px;      /* inside */
+  border: 1px solid #ccc;
+  margin: 10px;       /* outside */
+}</code></pre></div><p>Every element is a box: <em>content + padding + border + margin</em>.</p></section>
+
+          <section id="flex"><h3>Flexbox</h3><div class="codeblock"><div class="cb-head"><span class="cb-lang">css</span><button class="copy-btn" aria-label="Copy code">Copy</button></div><pre><code>.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}</code></pre></div><p>Flexbox lays items in a row and spaces them easily.</p></section>
+
+          <section id="grid"><h3>CSS Grid</h3><div class="codeblock"><div class="cb-head"><span class="cb-lang">css</span><button class="copy-btn" aria-label="Copy code">Copy</button></div><pre><code>.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 16px;
+}</code></pre></div><p>Grid builds 2D layouts (rows + columns) like a spreadsheet.</p></section>
+        </section>
+
+        <section id="advanced" class="level-panel" data-level="advanced" role="tabpanel" aria-labelledby="tab-advanced">
+          <h2>🔴 Advanced — Responsive &amp; Modern CSS</h2>
+          <section id="media"><h3>Media Queries</h3><div class="codeblock"><div class="cb-head"><span class="cb-lang">css</span><button class="copy-btn" aria-label="Copy code">Copy</button></div><pre><code>@media (max-width: 600px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}</code></pre></div><p>Change layout on small screens (phones).</p></section>
+
+          <section id="vars"><h3>CSS Variables</h3><div class="codeblock"><div class="cb-head"><span class="cb-lang">css</span><button class="copy-btn" aria-label="Copy code">Copy</button></div><pre><code>:root {
+  --brand: #4f46e5;
+}
+.btn {
+  background: var(--brand);
+}</code></pre></div><p>Store values once, reuse everywhere.</p></section>
+
+          <section id="anim"><h3>Transitions &amp; Animation</h3><div class="codeblock"><div class="cb-head"><span class="cb-lang">css</span><button class="copy-btn" aria-label="Copy code">Copy</button></div><pre><code>.btn {
+  transition: transform 0.2s;
+}
+.btn:hover {
+  transform: scale(1.05);
+}</code></pre></div><p>Smooth motion on hover and state changes.</p></section>
+        </section>
+
+        <section id="next"><h2>What's Next?</h2><ul><li>Build a <em>portfolio page</em> or <em>blog layout</em></li><li>Learn <strong>JavaScript</strong> to make pages interactive</li><li>Try a framework later: <strong>React</strong>, <strong>Vue</strong>, or <strong>Tailwind CSS</strong></li></ul><p class="callout play"><span class="ico" aria-hidden="true">🎮</span>Copy the examples above into CodePen and change colors and text — that's how it clicks!</p></section>
+      </article>
+    </div>
+  </main>
+  <footer class="site-footer"><div class="container"><div class="footer-bottom"><p>© <span id="year"></span> CodeHub. Free for everyone.</p></div></div></footer>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  <script src="../js/main.js"></script>
+</body>
+</html>

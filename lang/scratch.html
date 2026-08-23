@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Learn Scratch from zero. Free visual block-coding tutorial for beginners and kids. Build games and animations, no install needed." />
+  <meta name="theme-color" content="#4f46e5" />
+  <title>Scratch Tutorial — CodeHub</title>
+  <link rel="stylesheet" href="../css/styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header"><div class="container nav"><a class="brand" href="../index.html" aria-label="CodeHub home"><span class="logo" aria-hidden="true"></></span><span>CodeHub</span></a><button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">☰</button><nav aria-label="Primary"><ul class="nav-links"><li><a href="../index.html">Home</a></li><li><a href="../languages.html" class="active">Languages</a></li><li><a href="../index.html#start">Start Here</a></li><li><a href="../index.html#faq">FAQ</a></li></ul></nav><button class="theme-toggle" aria-label="Switch to dark mode">🌙</button></div></header>
+  <main id="main">
+    <nav class="breadcrumb container" aria-label="Breadcrumb"><a href="../index.html">Home</a><span>›</span><a href="../languages.html">Languages</a><span>›</span><span aria-current="page">Scratch</span></nav>
+    <div class="container tutorial-layout">
+      <aside class="toc" aria-label="Table of contents"><h4>Contents</h4><ul><li><a href="#what">What is Scratch?</a></li><li><a href="#setup">Run Online (No Install)</a></li><li><a href="#beginner">Beginner</a></li><li><a href="#intermediate">Intermediate</a></li><li><a href="#advanced">Advanced</a></li><li><a href="#next">What's Next?</a></li></ul></aside>
+      <article class="lesson">
+        <h1>🧩 Scratch — Learn From Zero</h1>
+        <p class="callout play"><span class="ico" aria-hidden="true">🎮</span><strong>Playground:</strong> <a href="https://scratch.mit.edu/projects/editor/" target="_blank" rel="noopener">Scratch Editor</a> | <a href="https://scratch.mit.edu/explore/projects/all" target="_blank" rel="noopener">Explore Projects</a> — click, drag blocks, run.</p>
+
+        <section id="what"><h2>What is Scratch?</h2><p><strong>Scratch</strong> is a <em>visual</em> programming language made by MIT. Instead of typing code, you <strong>drag and snap colorful blocks</strong> together — like digital LEGO. It's the friendliest way to learn how programming thinks, and it's perfect for kids and absolute beginners.</p><ul><li>Animated stories &amp; cartoons</li><li>Games (mazes, catch-the-ball, quizzes)</li><li>Music and art generators</li></ul></section>
+
+        <section id="setup"><h2>Run Online — No Install</h2><p>Go to <a href="https://scratch.mit.edu/projects/editor/" target="_blank" rel="noopener">scratch.mit.edu/projects/editor</a>. No download, no account needed to try. Just drag blocks from the palette into the scripting area and click the green flag.</p></section>
+
+        <div class="level-tabs" role="tablist" aria-label="Difficulty level">
+          <button class="level-tab" role="tab" aria-selected="true" data-level="beginner" id="tab-beginner">🟢 Beginner</button>
+          <button class="level-tab" role="tab" aria-selected="false" data-level="intermediate" id="tab-intermediate">🟡 Intermediate</button>
+          <button class="level-tab" role="tab" aria-selected="false" data-level="advanced" id="tab-advanced">🔴 Advanced</button>
+        </section>
+
+        <section id="beginner" class="level-panel" data-level="beginner" role="tabpanel" aria-labelledby="tab-beginner">
+          <h2>🟢 Beginner — Make a Sprite Move</h2>
+          <section id="move"><h3>The Green Flag</h3><p>Every program starts with a <strong>when green flag clicked</strong> block (from the Events palette). Snap your other blocks underneath it.</p></section>
+
+          <section id="motion"><h3>Move &amp; Say</h3><p>From the <strong>Motion</strong> palette, drag <code>move 10 steps</code>. From <strong>Looks</strong>, drag <code>say "Hello!"</code>. Click the green flag — the cat walks and talks.</p><div class="codeblock"><div class="cb-head"><span class="cb-lang">blocks</span><button class="copy-btn" aria-label="Copy code">Copy</button></div><pre><code>when green flag clicked
+move 10 steps
+say "Hello!" for 2 seconds</code></pre></div></section>
+
+          <section id="repeat"><h3>Repeat (Loops)</h3><p>Wrap blocks in a <code>repeat 10</code> loop (Control palette) so they run many times.</p><div class="codeblock"><div class="cb-head"><span class="cb-lang">blocks</span><button class="copy-btn" aria-label="Copy code">Copy</button></div><pre><code>when green flag clicked
+repeat 10
+  move 10 steps
+  turn 15 degrees</code></pre></div></section>
+        </section>
+
+        <section id="intermediate" class="level-panel" data-level="intermediate" role="tabpanel" aria-labelledby="tab-intermediate">
+          <h2>🟡 Intermediate — Interaction &amp; Variables</h2>
+          <section id="events"><h3>React to the Keyboard</h3><p>Use <code>when key pressed [space]</code> (Events) to make things happen when the player acts.</p></section>
+
+          <section id="var"><h3>Variables (Score)</h3><p>Make a variable <code>score</code> (Variables palette). Increase it when the player catches something.</p><div class="codeblock"><div class="cb-head"><span class="cb-lang">blocks</span><button class="copy-btn" aria-label="Copy code">Copy</button></div><pre><code>when green flag clicked
+set score to 0
+when sprite2 clicked
+  change score by 1</code></pre></div></section>
+
+          <section id="if"><h3>If / Else</h3><p>From Control, use <code>if &lt;touching mouse-pointer?&gt; then</code> to detect collisions.</p></section>
+        </section>
+
+        <section id="advanced" class="level-panel" data-level="advanced" role="tabpanel" aria-labelledby="tab-advanced">
+          <h2>🔴 Advanced — Broadcasting &amp; Clones</h2>
+          <section id="broadcast"><h3>Broadcast Messages</h3><p>Send a message with <code>broadcast "game over"</code> so other sprites react at the same time.</p><div class="codeblock"><div class="cb-head"><span class="cb-lang">blocks</span><button class="copy-btn" aria-label="Copy code">Copy</button></div><pre><code>when green flag clicked
+broadcast "start game"
+
+when I receive "start game"
+  go to x: 0 y: 0</code></pre></div></section>
+
+          <section id="clone"><h3>Clones</h3><p>Use <code>create clone of myself</code> to spawn many enemies or raindrops without copying sprites by hand.</p></section>
+
+          <section id="custom"><h3>Custom Blocks</h3><p>Define your own block with <code>define jump</code> to reuse a sequence of actions — like a function.</p></section>
+        </section>
+
+        <section id="next"><h2>What's Next?</h2><ul><li>Build a <em>maze game</em> or <em>catch-the-apple</em> game</li><li>Share it on the <a href="https://scratch.mit.edu/explore/projects/all" target="_blank" rel="noopener">Scratch community</a></li><li>After Scratch, move to <strong>Python</strong> or <strong>JavaScript</strong> — the thinking is the same!</li></ul><p class="callout play"><span class="ico" aria-hidden="true">🎮</span>Drag blocks in the Scratch editor and click the green flag. Seeing your sprite move is the best "aha!" moment.</p></section>
+      </article>
+    </div>
+  </main>
+  <footer class="site-footer"><div class="container"><div class="footer-bottom"><p>© <span id="year"></span> CodeHub. Free for everyone.</p></div></div></footer>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  <script src="../js/main.js"></script>
+</body>
+</html>
