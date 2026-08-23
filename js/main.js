@@ -224,4 +224,48 @@
       pWrap.appendChild(s);
     }
   }
+
+  /* ---------- Carreiras: bars + count-up on reveal ---------- */
+  function animateCount(el) {
+    var target = parseFloat(el.getAttribute("data-count")) || 0;
+    var prefix = el.getAttribute("data-prefix") || "";
+    var suffix = el.getAttribute("data-suffix") || "";
+    var dur = 1100;
+    var start = null;
+    function step(ts) {
+      if (!start) start = ts;
+      var p = Math.min((ts - start) / dur, 1);
+      var eased = 1 - Math.pow(1 - p, 3);
+      var val = Math.round(target * eased);
+      el.textContent = prefix + val.toLocaleString("pt-BR") + suffix;
+      if (p < 1) requestAnimationFrame(step);
+      else el.textContent = prefix + target.toLocaleString("pt-BR") + suffix;
+    }
+    requestAnimationFrame(step);
+  }
+  function activateCareerCard(card) {
+    card.querySelectorAll(".bar-fill").forEach(function (b) {
+      var w = b.getAttribute("data-w");
+      if (w) b.style.width = w + "%";
+    });
+    card.querySelectorAll("[data-count]").forEach(animateCount);
+  }
+  var careerCards = Array.prototype.slice.call(document.querySelectorAll(".career-card"));
+  if (careerCards.length) {
+    if (reduce || !("IntersectionObserver" in window)) {
+      careerCards.forEach(activateCareerCard);
+    } else {
+      var cio = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            activateCareerCard(entry.target);
+            cio.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.25 });
+      careerCards.forEach(function (c) { cio.observe(c); });
+    }
+  }
+  // Hero stats count-up (runs once on load)
+  document.querySelectorAll(".hero-stats [data-count]").forEach(animateCount);
 })();
