@@ -7,9 +7,11 @@
   <meta name="theme-color" content="#4f46e5" />
   <title>CodeHub — Learn Programming From Zero, Free</title>
   <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/neon.css" />
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>%E2%8C%A8</text></svg>" />
 </head>
 <body>
+  <div class="scroll-progress" id="scrollProgress"></div>
   <a class="skip-link" href="#main">Skip to content</a>
 
   <header class="site-header">
@@ -23,7 +25,7 @@
         <ul class="nav-links">
           <li><a href="index.html" class="active">Home</a></li>
           <li><a href="languages.html">Languages</a></li>
-          <li><a href="carreiras.html">Careers</a></li>
+          <li><a href="careers.html">Careers</a></li>
           <li><a href="index.html#start">Start Here</a></li>
           <li><a href="index.html#faq">FAQ</a></li>
         </ul>
@@ -34,7 +36,7 @@
 
   <main id="main">
     <!-- HERO -->
-    <section class="hero">
+    <section class="hero has-bg">
       <div class="hero-particles" id="heroParticles" aria-hidden="true"></div>
       <div class="container">
         <h1>Learn to <span class="grad">Code</span><br />From Zero, For Free</h1>
@@ -68,6 +70,16 @@
           <span class="chip">Kotlin</span>
           <span class="chip">Swift</span>
         </div>
+      </div>
+    </section>
+
+    <!-- STATS (real numbers from this site) -->
+    <section class="stats-strip" data-reveal>
+      <div class="container stats">
+        <div class="stat"><div class="num" data-count="18" data-suffix="">0</div><div class="lbl">Languages with free tutorials</div></div>
+        <div class="stat"><div class="num" data-count="26" data-suffix="">0</div><div class="lbl">Tech careers mapped</div></div>
+        <div class="stat"><div class="num" data-count="100" data-suffix="%">0</div><div class="lbl">Free &amp; open, no paywall</div></div>
+        <div class="stat"><div class="num" data-count="3" data-suffix="">0</div><div class="lbl">Difficulty levels per language</div></div>
       </div>
     </section>
 
@@ -195,7 +207,7 @@
       <div class="container">
         <h2>Which tech career fits you?</h2>
         <p>See what each role does and what it pays in your early years — gross and net. A complete, free guide.</p>
-        <a class="btn" href="carreiras.html">Explore tech careers →</a>
+        <a class="btn" href="careers.html">Explore tech careers →</a>
       </div>
     </section>
 
@@ -231,6 +243,17 @@
       </div>
     </section>
 
+  
+    <!-- Feedback Widget -->
+    <div class="container" style="padding-bottom: 40px;">
+      <div class="feedback-widget" data-reveal>
+        <p>Was this page helpful?</p>
+        <div class="feedback-actions">
+          <button class="feedback-btn" onclick="this.parentElement.innerHTML='<span style=\'color:var(--success);font-weight:bold;\'>Thank you for your feedback! 💖</span>'">👍 Yes</button>
+          <button class="feedback-btn" onclick="this.parentElement.innerHTML='<span style=\'color:var(--text-muted);font-weight:bold;\'>Thanks for the feedback! 📝</span>'">👎 No</button>
+        </div>
+      </div>
+    </div>
   </main>
 
   <footer class="site-footer">
@@ -278,7 +301,7 @@
         </div>
       </div>
       <div class="footer-bottom">
-        <p>© <span id="year"></span> CodeHub. Created &amp; maintained by <strong>Henri Daniel Menon</strong>. Made with ♥ for learners everywhere. This site is free and open. · <a href="mailto:Henridaniel.menon.m@gmail.com">Contact support</a></p>
+        <p>© <span id="year"></span> CodeHub. Created &amp; maintained by <strong>Menon-Martins</strong>. Made with ♥ for learners everywhere. This site is free and open. · <a href="mailto:Henridaniel.menon.m@gmail.com">Contact support</a></p>
       </div>
     </div>
   </footer>

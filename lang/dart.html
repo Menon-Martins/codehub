@@ -7,8 +7,10 @@
   <meta name="theme-color" content="#4f46e5" />
   <title>Dart Tutorial — CodeHub</title>
   <link rel="stylesheet" href="../css/styles.css" />
+  <link rel="stylesheet" href="../css/neon.css" />
 </head>
 <body>
+  <div class="scroll-progress" id="scrollProgress"></div>
   <a class="skip-link" href="#main">Skip to content</a>
   <header class="site-header"><div class="container nav"><a class="brand" href="../index.html" aria-label="CodeHub home"><span class="logo" aria-hidden="true"></></span><span>CodeHub</span></a><button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">☰</button><nav aria-label="Primary"><ul class="nav-links"><li><a href="../index.html">Home</a></li><li><a href="../languages.html" class="active">Languages</a></li><li><a href="../index.html#start">Start Here</a></li><li><a href="../index.html#faq">FAQ</a></li></ul></nav><button class="theme-toggle" aria-label="Switch to dark mode">🌙</button></div></header>
   <main id="main">
@@ -82,11 +84,39 @@ class A with Logger {}</code></pre></div><p>Reuse implementations via <code>with
 // spawn isolates for parallelism</code></pre></div><p>Concurrency without shared memory.</p></section>
         </section>
 
-        <section id="next"><h2>What's Next?</h2><ul><li>Build a tiny project: <em>Calculator</em>, <em>To-Do App</em>, <em>Weather Widget</em></li><li>Read the official docs and a good book</li><li>Solve <a href="https://exercism.org" target="_blank" rel="noopener">Exercism</a> exercises</li><li>Join a community &amp; share your code</li></ul><p class="callout play"><span class="ico" aria-hidden="true">🎮</span>Practice daily for 20 minutes. Consistency &gt; intensity.</p></section>
+        
+      <section id="quiz" class="quiz-section" data-reveal>
+        <h2>🧠 Quick Quiz</h2>
+        <p>Test your knowledge.</p>
+        <div class="quiz-container">
+          <div class="quiz-question active">
+            <h3>1. What is the primary run environment or purpose for DART?</h3>
+            <div class="quiz-options">
+              <button class="quiz-opt" data-correct="true">It depends on the framework or standard library used for most common tasks.</button>
+              <button class="quiz-opt">It is exclusively a frontend language.</button>
+              <button class="quiz-opt">It is only used for databases.</button>
+            </div>
+            <div class="quiz-feedback"></div>
+          </div>
+        </div>
+      </section>
+
+<section id="next"><h2>What's Next?</h2><ul><li>Build a tiny project: <em>Calculator</em>, <em>To-Do App</em>, <em>Weather Widget</em></li><li>Read the official docs and a good book</li><li>Solve <a href="https://exercism.org" target="_blank" rel="noopener">Exercism</a> exercises</li><li>Join a community &amp; share your code</li></ul><p class="callout play"><span class="ico" aria-hidden="true">🎮</span>Practice daily for 20 minutes. Consistency &gt; intensity.</p></section>
       </article>
     </div>
+  
+    <!-- Feedback Widget -->
+    <div class="container" style="padding-bottom: 40px;">
+      <div class="feedback-widget" data-reveal>
+        <p>Was this page helpful?</p>
+        <div class="feedback-actions">
+          <button class="feedback-btn" onclick="this.parentElement.innerHTML='<span style=\'color:var(--success);font-weight:bold;\'>Thank you for your feedback! 💖</span>'">👍 Yes</button>
+          <button class="feedback-btn" onclick="this.parentElement.innerHTML='<span style=\'color:var(--text-muted);font-weight:bold;\'>Thanks for the feedback! 📝</span>'">👎 No</button>
+        </div>
+      </div>
+    </div>
   </main>
-  <footer class="site-footer"><div class="container"><div class="footer-bottom"><p>© <span id="year"></span> CodeHub. Free for everyone.</p></div></div></footer>
+  <footer class="site-footer"><div class="container"><div class="footer-bottom"><p>© <span id="year"></span> CodeHub. Free for everyone.<br><span class="credit">Created &amp; maintained by <strong>Menon-Martins</strong>.</span></p></div></div></footer>
   <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
   <script src="../js/main.js"></script>
 </body>
