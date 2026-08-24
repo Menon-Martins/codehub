@@ -1,0 +1,102 @@
+/* ============================================================
+   CodeHub — Neon Overlay
+   Camada extra de brilho/neon por cima do tema dark (styles.css).
+   Recriado para igualar o visual do servidor local (localhost:8090).
+   ============================================================ */
+
+/* Glow global no body para dar aquele "tal" neon */
+body {
+  background:
+    radial-gradient(80% 50% at 50% -10%, color-mix(in srgb, var(--primary) 18%, transparent), transparent 70%),
+    var(--bg-color);
+  text-shadow: 0 0 1px rgba(255, 255, 255, 0.04);
+}
+
+/* Títulos com gradiente neon ciano -> magenta */
+h1, h2, h3 {
+  background: linear-gradient(120deg, var(--accent-cyan), var(--accent-magenta));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  filter: drop-shadow(0 0 14px rgba(0, 242, 255, 0.25));
+}
+.site-header .brand,
+.footer-bottom strong {
+  background: linear-gradient(120deg, var(--accent-cyan), var(--accent-magenta));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Cards com borda neon e brilho */
+.panel, .career-card, .lesson, .codeblock, .quiz-container {
+  border: 1px solid color-mix(in srgb, var(--accent-cyan) 35%, var(--border));
+  box-shadow:
+    0 0 0 1px rgba(0, 242, 255, 0.05),
+    0 0 22px rgba(0, 242, 255, 0.08),
+    inset 0 0 18px rgba(255, 0, 204, 0.04);
+}
+.panel:hover, .career-card:hover, .lesson:hover {
+  border-color: var(--accent-cyan);
+  box-shadow:
+    0 0 0 1px rgba(0, 242, 255, 0.2),
+    0 0 30px rgba(0, 242, 255, 0.22),
+    inset 0 0 26px rgba(255, 0, 204, 0.08);
+}
+
+/* Botões com glow neon */
+.btn-primary {
+  box-shadow:
+    0 0 18px rgba(138, 43, 226, 0.45),
+    0 0 28px rgba(0, 242, 255, 0.25);
+  border: 1px solid color-mix(in srgb, var(--accent-cyan) 50%, transparent);
+}
+.btn-primary:hover {
+  box-shadow:
+    0 0 26px rgba(138, 43, 226, 0.6),
+    0 0 40px rgba(0, 242, 255, 0.4);
+}
+
+/* Logo com glow forte */
+.brand .logo {
+  box-shadow: 0 0 18px rgba(0, 242, 255, 0.5);
+}
+
+/* Scrollbar neon */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--accent-cyan) transparent;
+}
+*::-webkit-scrollbar { width: 10px; height: 10px; }
+*::-webkit-scrollbar-thumb {
+  background: linear-gradient(var(--accent-cyan), var(--accent-magenta));
+  border-radius: 999px;
+}
+*::-webkit-scrollbar-track { background: transparent; }
+
+/* Links com sublinhado neon no hover */
+a:hover { text-shadow: 0 0 8px rgba(0, 242, 255, 0.5); }
+
+/* Crédito do dono em destaque */
+.credit strong {
+  background: linear-gradient(120deg, var(--accent-cyan), var(--accent-magenta));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-weight: 800;
+}
+.credit {
+  display: inline-block;
+  margin-top: 6px;
+  font-size: 0.92rem;
+  color: var(--text-muted);
+}
+
+/* Anel pulsante sutil no hero */
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(40% 40% at 50% 0%, rgba(0, 242, 255, 0.08), transparent 70%);
+}
